@@ -1,0 +1,19 @@
+{
+    "description": "Project CRUD",
+    "authors": [
+        {
+            "name": "André Freitas",
+            "email": "dre.freitas23@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core",
+            "App\\": "app",
+            "Adms\\": "app/adms"
+        }
+    },
+    "require": {
+
+    }
+}

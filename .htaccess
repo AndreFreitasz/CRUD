@@ -1,0 +1,15 @@
+# Ativa o módulo Rewrite, na qual faz a reescrita da URL.   
+RewriteEngine On
+
+# Informa que será criado uma condição a ser aplicado ao nome do diretório requisitado.
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Informa que será criado uma condição a ser aplicado ao nome do arquivo requisitado.
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Informa que será criado uma condição a ser aplicado ao link simbólico requisitado.
+RewriteCond %{REQUEST_FILENAME} !-l
+
+#RewriteRule faz a reescrita da URL
+#QSA significa que se houver uma string de consulta passada com a URL original, ela será anexada à reescrita.
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
